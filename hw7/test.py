@@ -15,4 +15,14 @@
 # момент матиме енергію в 3. Другий список пропустить відразу, а третій повністю поглине
 # та отримає остаточну енергію в 6.
 
-def game(terra, power):
+def game(terra: list[list], power: int):
+    for lst in terra:
+        for pwr in lst:
+            if power >= pwr:
+                power += pwr
+            else:
+                break
+    return power
+
+
+print(game(terra=[[1, 1, 5, 10], [10, 2], [1, 1, 1]], power=1))
