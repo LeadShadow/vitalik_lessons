@@ -4,6 +4,7 @@ s = 'I am 19 65464 years old'
 
 age = re.search(r'\d+', s)
 print(age.group())
+print(age)
 # \d - всі цифри -> [0-9]
 # \D - все окрім цифр
 age = re.findall(r'\d+', s)
